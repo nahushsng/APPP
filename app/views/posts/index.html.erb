@@ -1,0 +1,12 @@
+<h1>Posts..<br></h1>
+<%= notice %><br>
+<p><%= link_to 'Create Post', new_post_path%></p>
+
+<%= @posts.each do |post| %>
+    ID:<%= post.id %><br>
+    <%= post.title %><br>
+    <%= post.body %><br
+    <p><%= link_to 'Show Post', post%></p>
+    <p><%= link_to 'Update Post', edit_post_path(post) %></p>
+    <p><%= button_to 'Delete', post, method: :delete %></p>
+<% end %>
